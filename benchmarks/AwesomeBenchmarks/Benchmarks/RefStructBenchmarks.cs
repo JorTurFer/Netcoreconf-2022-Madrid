@@ -6,7 +6,7 @@ namespace AwesomeBenchmarks.Benchmarks
     public class RefStructBenchmarks
     {
         private readonly BigStruct _bigStruct = new BigStruct();
-        private readonly int _iterations = 1000;
+        private readonly int _iterations = 10000;
 
         [Benchmark(Baseline = true)]
         public void GetStruct()

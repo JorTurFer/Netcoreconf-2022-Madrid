@@ -2,6 +2,7 @@ using BenchmarkDotNet.Attributes;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using AwesomeBenchmarks.Services;
+using System;
 
 namespace PostILogger.Benchmarks
 {
@@ -15,7 +16,7 @@ namespace PostILogger.Benchmarks
             IServiceCollection serviceCollection = new ServiceCollection();
             serviceCollection.AddLogging();
             var loggerFactory = serviceCollection.BuildServiceProvider().GetService<ILoggerFactory>();
-            _logger = loggerFactory.CreateLogger("TEST");
+            _logger = loggerFactory?.CreateLogger("TEST") ?? throw new ArgumentNullException();
         }
 
         [Benchmark(Baseline = true)]

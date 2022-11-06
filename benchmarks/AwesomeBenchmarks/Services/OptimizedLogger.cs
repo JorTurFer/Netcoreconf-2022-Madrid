@@ -5,9 +5,10 @@ namespace AwesomeBenchmarks.Services
 {
     public static class OptimizedLogger
     {
-        public static void LogInformation(ILogger logger) => _informationSinParametros(logger, null);
-        public static void LogInformation(ILogger logger,string parametro1) => _information1Parametro(logger,parametro1, null);
-        public static void LogInformation(ILogger logger, string parametro1, string parametro2) => _information2Parametros(logger,parametro1,parametro2, null);
+        static Exception Exception = new Exception();
+        public static void LogInformation(ILogger logger) => _informationSinParametros(logger, Exception);
+        public static void LogInformation(ILogger logger,string parametro1) => _information1Parametro(logger,parametro1, Exception);
+        public static void LogInformation(ILogger logger, string parametro1, string parametro2) => _information2Parametros(logger,parametro1,parametro2, Exception);
 
 
         private static readonly Action<ILogger, Exception> _informationSinParametros = LoggerMessage.Define(
