@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-benchmarks", "01-benchma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeBenchmarks", "benchmarks\AwesomeBenchmarks\AwesomeBenchmarks.csproj", "{E5359B29-A123-4820-A45B-7C67A0214CA8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-samples", "02-samples", "{FDDD8A91-6D07-4DF2-BE6B-C07A5A4F3EB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Channels", "samples\Channels\Channels.csproj", "{8679C8EA-2790-4182-80AD-53D1C47D2D9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{E5359B29-A123-4820-A45B-7C67A0214CA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5359B29-A123-4820-A45B-7C67A0214CA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5359B29-A123-4820-A45B-7C67A0214CA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8679C8EA-2790-4182-80AD-53D1C47D2D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8679C8EA-2790-4182-80AD-53D1C47D2D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8679C8EA-2790-4182-80AD-53D1C47D2D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8679C8EA-2790-4182-80AD-53D1C47D2D9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E5359B29-A123-4820-A45B-7C67A0214CA8} = {E3A8DEEC-3D12-49CF-82F5-CBDF2D11AE76}
+		{8679C8EA-2790-4182-80AD-53D1C47D2D9D} = {FDDD8A91-6D07-4DF2-BE6B-C07A5A4F3EB5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0854034B-E1C9-4C6A-A642-E85F09502AAD}
