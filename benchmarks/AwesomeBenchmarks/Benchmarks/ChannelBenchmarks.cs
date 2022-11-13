@@ -12,24 +12,19 @@ public class ChannelBenchmarks
 {
     private readonly Channel<int> _channel = Channel.CreateUnbounded<int>();
     private readonly BlockingCollection<int> _blockingCollection = new();
-    
+
+
     [Benchmark]
     public async Task Channel_ReadThenWrite()
     {
-        for (var i = 1; i < 10_000_000; i++)
-        {
-            _channel.Writer.TryWrite(i);
-            await _channel.Reader.ReadAsync();
-        }
+        _channel.Writer.TryWrite(0);
+        await _channel.Reader.ReadAsync();
     }
 
-    [Benchmark]
+    [Benchmark(Baseline = true)]
     public void BufferBlock_ReadThenWrite()
     {
-        for (var i = 1; i < 10_000_000; i++)
-        {
-            _blockingCollection.Add(i);
-            _blockingCollection.Take();
-        }
+        _blockingCollection.Add(0);
+        _blockingCollection.Take();
     }
 }
